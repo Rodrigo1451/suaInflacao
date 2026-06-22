@@ -1,0 +1,78 @@
+{
+  "periodoReferencia": "2026-05",
+  "atualizadoEm": "2026-06-22T19:55:31.822Z",
+  "categorias": [
+    {
+      "id": "7170",
+      "nome": "Alimentação e bebidas",
+      "variacaoMensal": 1.33,
+      "variacaoAcumuladaAno": 4.81,
+      "variacaoAcumulada12m": 3.87,
+      "pesoOficial": 21.5939
+    },
+    {
+      "id": "7445",
+      "nome": "Habitação",
+      "variacaoMensal": 1.22,
+      "variacaoAcumuladaAno": 2.28,
+      "variacaoAcumulada12m": 6.22,
+      "pesoOficial": 15.1949
+    },
+    {
+      "id": "7486",
+      "nome": "Artigos de residência",
+      "variacaoMensal": 0.08,
+      "variacaoAcumuladaAno": 1.58,
+      "variacaoAcumulada12m": 0.54,
+      "pesoOficial": 3.4654
+    },
+    {
+      "id": "7558",
+      "nome": "Vestuário",
+      "variacaoMensal": 0.62,
+      "variacaoAcumuladaAno": 1.51,
+      "variacaoAcumulada12m": 4.6,
+      "pesoOficial": 4.6271
+    },
+    {
+      "id": "7625",
+      "nome": "Transportes",
+      "variacaoMensal": -0.46,
+      "variacaoAcumuladaAno": 2.59,
+      "variacaoAcumulada12m": 4.05,
+      "pesoOficial": 20.4854
+    },
+    {
+      "id": "7660",
+      "nome": "Saúde e cuidados pessoais",
+      "variacaoMensal": 0.9,
+      "variacaoAcumuladaAno": 3.83,
+      "variacaoAcumulada12m": 6.04,
+      "pesoOficial": 13.6659
+    },
+    {
+      "id": "7712",
+      "nome": "Despesas pessoais",
+      "variacaoMensal": 0.41,
+      "variacaoAcumuladaAno": 2.16,
+      "variacaoAcumulada12m": 5.77,
+      "pesoOficial": 10.2357
+    },
+    {
+      "id": "7766",
+      "nome": "Educação",
+      "variacaoMensal": 0,
+      "variacaoAcumuladaAno": 5.32,
+      "variacaoAcumulada12m": 6.36,
+      "pesoOficial": 6.2144
+    },
+    {
+      "id": "7786",
+      "nome": "Comunicação",
+      "variacaoMensal": 0.23,
+      "variacaoAcumuladaAno": 1.97,
+      "variacaoAcumulada12m": 1.75,
+      "pesoOficial": 4.5171
+    }
+  ]
+}

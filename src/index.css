@@ -1,0 +1,216 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Colors - design system: Dark OLED */
+  --c-bg:          #0f172a;
+  --c-surface:     #1e293b;
+  --c-surface-2:   #334155;
+  --c-border:      rgba(255,255,255,0.08);
+  --c-text:        #f1f5f9;
+  --c-text-muted:  #94a3b8;
+  --c-primary:     #3b82f6;
+  --c-primary-dk:  #1e40af;
+  --c-accent:      #059669;
+  --c-success:     #4ade80;
+  --c-danger:      #f87171;
+  --c-warning:     #fbbf24;
+  /* Typography */
+  --font:          'IBM Plex Sans', system-ui, sans-serif;
+  /* Radii */
+  --r:             0.5rem;
+  --r-lg:          0.875rem;
+  /* Transitions */
+  --t-fast:        150ms ease;
+  --t-base:        200ms ease;
+  --t-slow:        300ms ease;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--c-bg);
+  color: var(--c-text);
+  line-height: 1.6;
+  min-height: 100dvh;
+}
+
+#root {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Focus visible ring - keyboard accessibility */
+:focus-visible {
+  outline: 2px solid var(--c-primary);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+a { color: var(--c-primary); }
+
+button {
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: inherit;
+  touch-action: manipulation;
+}
+
+/* Range input */
+input[type="range"] {
+  width: 100%;
+  height: 6px;
+  accent-color: var(--c-primary);
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--c-surface-2);
+  border-radius: 3px;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--c-primary);
+  cursor: pointer;
+  transition: background var(--t-fast), transform var(--t-fast);
+  box-shadow: 0 0 0 0 rgba(59,130,246,0);
+}
+input[type="range"]:hover::-webkit-slider-thumb,
+input[type="range"]:focus-visible::-webkit-slider-thumb {
+  background: #60a5fa;
+  transform: scale(1.15);
+}
+input[type="range"]:focus-visible {
+  outline: 2px solid var(--c-primary);
+}
+
+/* Number input */
+input[type="number"] {
+  font-family: var(--font);
+  background: var(--c-surface-2);
+  color: var(--c-text);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  width: 4.5rem;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  transition: border-color var(--t-fast);
+  -moz-appearance: textfield;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; }
+input[type="number"]:focus { outline: none; border-color: var(--c-primary); }
+
+/* Page transition */
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.page-enter {
+  animation: fadeSlideIn var(--t-slow) ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-enter { animation: none; }
+  *, *::before, *::after { transition-duration: 0ms !important; }
+}
+
+/* Card */
+.card {
+  background: var(--c-surface);
+  border-radius: var(--r-lg);
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--c-border);
+}
+
+/* Btn */
+.btn-primary {
+  width: 100%;
+  padding: 0.9375rem;
+  background: var(--c-accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--r);
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: background var(--t-fast), transform var(--t-fast), box-shadow var(--t-fast);
+  min-height: 48px;
+}
+.btn-primary:hover { background: #047857; box-shadow: 0 4px 16px rgba(5,150,105,0.3); }
+.btn-primary:active { transform: scale(0.98); }
+.btn-primary:disabled {
+  background: var(--c-surface-2);
+  color: var(--c-text-muted);
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Toggle pills */
+.toggle-group {
+  display: flex;
+  gap: 0.25rem;
+  background: var(--c-surface);
+  border-radius: var(--r);
+  padding: 0.25rem;
+  border: 1px solid var(--c-border);
+}
+.toggle-btn {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: calc(var(--r) - 2px);
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background var(--t-base), color var(--t-base);
+  color: var(--c-text-muted);
+  background: transparent;
+  min-height: 44px;
+}
+.toggle-btn[aria-pressed="true"] {
+  background: var(--c-primary-dk);
+  color: #fff;
+}
+.toggle-btn:hover:not([aria-pressed="true"]) {
+  background: var(--c-surface-2);
+  color: var(--c-text);
+}
+
+/* Section label */
+.section-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-text-muted);
+  margin-bottom: 0.375rem;
+}
+
+/* Big number */
+.stat-value {
+  font-size: clamp(2rem, 8vw, 3.25rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.05;
+}

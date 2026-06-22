@@ -1,0 +1,40 @@
+﻿name: Sincronizar dados IPCA
+
+on:
+  schedule:
+    # Dia 12 de cada mes as 10:00 UTC (margem de segurança apos divulgacao IBGE entre dias 8-11)
+    - cron: '0 10 12 * *'
+  workflow_dispatch:
+    # Permite execucao manual via GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Executar script de sincronizacao
+        run: node scripts/sync-ipca.js
+
+      - name: Verificar se houve mudanca
+        id: diff
+        run: |
+          git diff --quiet public/ipca-data.json || echo "mudou=true" >> $GITHUB_OUTPUT
+
+      - name: Commit e push (somente se houver mudanca)
+        if: steps.diff.outputs.mudou == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/ipca-data.json
+          git commit -m "chore: atualizar dados IPCA $(date +%Y-%m)"
+          git push
