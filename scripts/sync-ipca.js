@@ -78,13 +78,28 @@ async function main() {
       if (!d) {
         throw new Error(`Codigo ${codigo} nao encontrado na resposta da API. Verifique se os codigos ainda sao validos.`)
       }
+
+      const pesoOficial   = d[VAR_PESO]
+      const variacaoMensal = d[VAR_MENSAL]
+      const variacao12m    = d[VAR_ACUMULADA_12M]
+
+      if (pesoOficial === null || pesoOficial === undefined) {
+        throw new Error(`Peso oficial nulo para categoria "${d.nome}" (${codigo}). A API pode estar em manutencao.`)
+      }
+      if (variacaoMensal === null || variacaoMensal === undefined) {
+        throw new Error(`Variacao mensal nula para categoria "${d.nome}" (${codigo}). A API pode estar em manutencao.`)
+      }
+      if (variacao12m === null || variacao12m === undefined) {
+        throw new Error(`Variacao 12m nula para categoria "${d.nome}" (${codigo}). A API pode estar em manutencao.`)
+      }
+
       return {
         id: d.id,
         nome: limparNome(d.nome),
-        variacaoMensal: d[VAR_MENSAL],
-        variacaoAcumuladaAno: d[VAR_ACUMULADA_ANO],
-        variacaoAcumulada12m: d[VAR_ACUMULADA_12M],
-        pesoOficial: d[VAR_PESO],
+        variacaoMensal,
+        variacaoAcumuladaAno: d[VAR_ACUMULADA_ANO] ?? null,
+        variacaoAcumulada12m: variacao12m,
+        pesoOficial,
       }
     })
 
