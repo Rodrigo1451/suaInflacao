@@ -23,7 +23,7 @@ export default function App() {
   const mainRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
-    fetch('/ipca-data.json')
+    fetch(`${import.meta.env.BASE_URL}ipca-data.json`)
       .then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json() as Promise<DadosIPCA> })
       .then((d) => {
         setDados(d)
