@@ -1,78 +1,78 @@
 {
-  "periodoReferencia": "2026-06",
-  "atualizadoEm": "2026-07-12T11:05:01.744Z",
+  "periodoReferencia": "2026-07",
+  "atualizadoEm": "2026-08-12T10:52:13.901Z",
   "categorias": [
     {
       "id": "7170",
       "nome": "Alimentação e bebidas",
-      "variacaoMensal": -0.24,
-      "variacaoAcumuladaAno": 4.56,
-      "variacaoAcumulada12m": 3.82,
-      "pesoOficial": 21.753
+      "variacaoMensal": -0.67,
+      "variacaoAcumuladaAno": 3.86,
+      "variacaoAcumulada12m": 3.4,
+      "pesoOficial": 21.6675
     },
     {
       "id": "7445",
       "nome": "Habitação",
-      "variacaoMensal": 0.63,
-      "variacaoAcumuladaAno": 2.92,
-      "variacaoAcumulada12m": 5.85,
-      "pesoOficial": 15.2915
+      "variacaoMensal": 0.99,
+      "variacaoAcumuladaAno": 3.94,
+      "variacaoAcumulada12m": 5.93,
+      "pesoOficial": 15.3642
     },
     {
       "id": "7486",
       "nome": "Artigos de residência",
-      "variacaoMensal": 0.23,
-      "variacaoAcumuladaAno": 1.81,
-      "variacaoAcumulada12m": 0.69,
-      "pesoOficial": 3.448
+      "variacaoMensal": 0.07,
+      "variacaoAcumuladaAno": 1.88,
+      "variacaoAcumulada12m": 0.67,
+      "pesoOficial": 3.4504
     },
     {
       "id": "7558",
       "nome": "Vestuário",
-      "variacaoMensal": 0.17,
-      "variacaoAcumuladaAno": 1.68,
-      "variacaoAcumulada12m": 3.99,
-      "pesoOficial": 4.6287
+      "variacaoMensal": -0.66,
+      "variacaoAcumuladaAno": 1.01,
+      "variacaoAcumulada12m": 3.87,
+      "pesoOficial": 4.6289
     },
     {
       "id": "7625",
       "nome": "Transportes",
-      "variacaoMensal": 0.17,
-      "variacaoAcumuladaAno": 2.76,
-      "variacaoAcumulada12m": 3.95,
-      "pesoOficial": 20.2731
+      "variacaoMensal": 0.05,
+      "variacaoAcumuladaAno": 2.81,
+      "variacaoAcumulada12m": 3.64,
+      "pesoOficial": 20.2729
     },
     {
       "id": "7660",
       "nome": "Saúde e cuidados pessoais",
-      "variacaoMensal": 0.23,
-      "variacaoAcumuladaAno": 4.07,
-      "variacaoAcumulada12m": 6.21,
-      "pesoOficial": 13.7078
+      "variacaoMensal": 0.4,
+      "variacaoAcumuladaAno": 4.49,
+      "variacaoAcumulada12m": 6.16,
+      "pesoOficial": 13.7181
     },
     {
       "id": "7712",
       "nome": "Despesas pessoais",
-      "variacaoMensal": 0.25,
-      "variacaoAcumuladaAno": 2.42,
-      "variacaoAcumulada12m": 5.79,
-      "pesoOficial": 10.2184
+      "variacaoMensal": 0.22,
+      "variacaoAcumuladaAno": 2.64,
+      "variacaoAcumulada12m": 5.22,
+      "pesoOficial": 10.2281
     },
     {
       "id": "7766",
       "nome": "Educação",
-      "variacaoMensal": -0.02,
-      "variacaoAcumuladaAno": 5.29,
-      "variacaoAcumulada12m": 6.33,
-      "pesoOficial": 6.178
+      "variacaoMensal": -0.03,
+      "variacaoAcumuladaAno": 5.26,
+      "variacaoAcumulada12m": 6.27,
+      "pesoOficial": 6.1673
     },
     {
       "id": "7786",
       "nome": "Comunicação",
-      "variacaoMensal": 0.19,
-      "variacaoAcumuladaAno": 2.17,
-      "variacaoAcumulada12m": 1.83,
-      "pesoOficial": 4.5015
+      "variacaoMensal": 0.04,
+      "variacaoAcumuladaAno": 2.21,
+      "variacaoAcumulada12m": 1.96,
+      "pesoOficial": 4.5026
     }
   ]
 }
